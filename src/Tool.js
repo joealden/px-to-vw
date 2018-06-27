@@ -3,31 +3,31 @@ import styled from "styled-components";
 
 class Tool extends React.Component {
   state = {
-    elementSizeAtBreakpoint: 50,
+    elementSize: 50,
     breakpoint: 2000,
     result: 2.5
   };
 
   updateResult = () => {
-    const elementSizeAtBreakpoint = Number(this.state.elementSizeAtBreakpoint);
+    const elementSize = Number(this.state.elementSize);
     const breakpoint = Number(this.state.breakpoint);
 
     if (
-      typeof elementSizeAtBreakpoint === "number" &&
-      !Number.isNaN(elementSizeAtBreakpoint) &&
+      typeof elementSize === "number" &&
+      !Number.isNaN(elementSize) &&
       typeof breakpoint === "number" &&
       !Number.isNaN(breakpoint) &&
       breakpoint !== 0
     ) {
-      const result = (elementSizeAtBreakpoint / breakpoint) * 100;
+      const result = (elementSize / breakpoint) * 100;
       this.setState({ result });
     } else {
       this.setState({ result: false });
     }
   };
 
-  updateElementSizeAtBreakpoint = ({ target }) => {
-    this.setState({ elementSizeAtBreakpoint: target.value }, () => {
+  updateElementSize = ({ target }) => {
+    this.setState({ elementSize: target.value }, () => {
       this.updateResult();
     });
   };
@@ -40,14 +40,12 @@ class Tool extends React.Component {
     return (
       <ToolWrapper>
         <ToolField>
-          <label htmlFor="element-size-at-breakpoint">
-            Element Size at Breakpoint (px):{" "}
-          </label>
+          <label htmlFor="element-size">Element Size (px): </label>
           <input
-            id="element-size-at-breakpoint"
+            id="element-size"
             type="text"
-            value={this.state.elementSizeAtBreakpoint}
-            onChange={this.updateElementSizeAtBreakpoint}
+            value={this.state.elementSize}
+            onChange={this.updateElementSize}
           />
         </ToolField>
         <ToolField>
@@ -73,7 +71,7 @@ const ToolWrapper = styled.div`
   margin: 40px auto 0;
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 500px;
 
   @media screen and (max-width: 660px) {
     margin: 40px 30px 0;
@@ -84,6 +82,11 @@ const ToolField = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  align-items: center;
+
+  &:first-child {
+    margin-bottom: 5px;
+  }
 
   label {
     text-align: center;
@@ -96,7 +99,6 @@ const ToolField = styled.div`
 
   input {
     padding: 5px;
-    margin-bottom: 5px;
     transition: border 0.15s ease-in-out;
     border: 2px solid lightgrey;
 

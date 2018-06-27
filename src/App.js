@@ -13,6 +13,11 @@ injectGlobal`
     padding: 0;
     font-size: 16px;
   }
+
+  /* Overflow was causing issues for whatever reason... */
+  html {
+    overflow-x: hidden;
+  }
 `;
 
 const App = () => (
@@ -43,7 +48,7 @@ const App = () => (
           needs to be equivalent to the <Code>px</Code> measurement at the
           breakpoint specified. The following formula is used to calculate this
           value:
-          <Code>(elementSizeAtBreakpoint / breakpoint) * 100</Code>.
+          <Code>(elementSize / breakpoint) * 100</Code>.
         </p>
         <p>
           In the example scenario above, substituting the values into the
