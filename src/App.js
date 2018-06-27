@@ -30,7 +30,7 @@ const App = () => (
       <LongDescription>
         <p>
           When creating a responsive webpage, it can be a time consuming task to
-          ensure that text scales correctly. For example, you want to have a
+          ensure that text scales correctly. For example, say you want to have a
           heading with a font size of <Code>50px</Code> at a breakpoint of
           <Code>2000px</Code> and you want the heading to scale responsively
           when the viewport size is different (smaller or larger) than the
