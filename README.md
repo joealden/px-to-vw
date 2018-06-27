@@ -1,7 +1,5 @@
 # vw-breakpoint-calculator
 
-SET BREAKPOINT AT 600px to fix mobile
-
 A tool that calculates the `vw` value of an CSS rule for a given breakpoint.
 
 When creating a responsive webpage, it can a time consuming task to ensure that
