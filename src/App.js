@@ -40,7 +40,7 @@ const App = () => (
           To achieve this, we can calculate a measurement using the{" "}
           <Code>vw</Code> unit that scales with the viewport instead of using an
           absolute unit like <Code>px</Code>. This <Code>vw</Code> measurement
-          needs to be equivalent to <Code>px</Code> measurement at the
+          needs to be equivalent to the <Code>px</Code> measurement at the
           breakpoint specified. The following formula is used to calculate this
           value:
           <Code>(elementSizeAtBreakpoint / breakpoint) * 100</Code>.
