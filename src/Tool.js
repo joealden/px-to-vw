@@ -43,7 +43,8 @@ class Tool extends React.Component {
           <label htmlFor="element-size">Element Size (px): </label>
           <input
             id="element-size"
-            type="text"
+            type="number"
+            pattern="[0-9]*"
             value={this.state.elementSize}
             onChange={this.updateElementSize}
           />
@@ -52,7 +53,8 @@ class Tool extends React.Component {
           <label htmlFor="breakpoint">Breakpoint (px): </label>
           <input
             id="breakpoint"
-            type="text"
+            type="number"
+            pattern="[0-9]*"
             value={this.state.breakpoint}
             onChange={this.updateBreakpoint}
           />
