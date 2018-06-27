@@ -29,31 +29,33 @@ const App = () => (
       <Tool />
       <LongDescription>
         <p>
-          When creating a responsive webpage, it can a time consuming task to
-          ensure that text scales correctly. For example, say you want to have a
-          heading have a font size of <Code>30px</Code> at a breakpoint of
-          <Code>2560px</Code> and you want the heading to scale responively when
-          the viewport is bigger and smaller than the breakpoint defined.
+          When creating a responsive webpage, it can a be time consuming task to
+          ensure that text scales correctly. For example, you want to have a
+          heading with a font size of <Code>50px</Code> at a breakpoint of
+          <Code>2000px</Code> and you want the heading to scale responsively
+          when the viewport size is different (smaller or larger) than the
+          breakpoint defined.
         </p>
         <p>
-          To achieve this, we can calculate a relative measurement (<Code>
-            vw
-          </Code>) that scales with the viewport instead of using an absolute
-          measurement like <Code>px</Code>. This <Code>vw</Code> measurement
-          needs to be equivalent to 30px at the breakpoint specified. The
-          following formula is used to calculate this value:
+          To achieve this, we can calculate a measurement using the{" "}
+          <Code>vw</Code> unit that scales with the viewport instead of using an
+          absolute unit like <Code>px</Code>. This <Code>vw</Code> measurement
+          needs to be equivalent to <Code>px</Code> measurement at the
+          breakpoint specified. The following formula is used to calculate this
+          value:
           <Code>(elementSizeAtBreakpoint / breakpoint) * 100</Code>.
         </p>
         <p>
-          In the example given above, putting the values into the formula would
-          give the following result: <Code>(30 / 2560) * 100 = 1.17</Code>. This
-          means that the value <Code>1.17vw</Code> can be used in place of the{" "}
-          <Code>30px</Code> value for the font-size of this heading to make it
-          scale with the viewport width.
+          In the example scenario above, substituting the values into the
+          formula would give the following result:{" "}
+          <Code>(50) / 2000) * 100 = 2.5</Code>. This means that the value{" "}
+          <Code>2.5vw</Code> can be used in place of the <Code>50px</Code> value
+          for the font-size of the heading to make it scale with the viewport
+          width.
         </p>
         <p>
           This is a tool to calculate this value so you don&#39;t have to
-          remember this formula everytime you need to use it (using pixels).
+          remember this formula everytime you need to use it.
         </p>
       </LongDescription>
     </main>
