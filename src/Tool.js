@@ -5,7 +5,7 @@ class Tool extends React.Component {
   state = {
     elementSizeAtBreakpoint: 50,
     breakpoint: 2000,
-    result: 0
+    result: 2.5
   };
 
   updateResult = () => {
