@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import styled, { injectGlobal } from "styled-components";
 
-import Tool from "../components/Tool";
+import Tool from "./Tool";
 
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
@@ -15,7 +15,7 @@ injectGlobal`
   }
 `;
 
-const Home = () => (
+const App = () => (
   <Page>
     <Helmet>
       <title>VW Breakpoint Calcuator</title>
@@ -26,6 +26,7 @@ const Home = () => (
         A tool that calculates the <Code>vw</Code> value of an CSS rule for a
         given breakpoint.
       </ShortDescription>
+      <Tool />
       <LongDescription>
         <p>
           When creating a responsive webpage, it can a time consuming task to
@@ -41,7 +42,7 @@ const Home = () => (
           measurement like <Code>px</Code>. This <Code>vw</Code> measurement
           needs to be equivalent to 30px at the breakpoint specified. The
           following formula is used to calculate this value:
-          <Code>(elementSizeAtBreakpoint / breakpoint) x 100</Code>.
+          <Code>(elementSizeAtBreakpoint / breakpoint) * 100</Code>.
         </p>
         <p>
           In the example given above, putting the values into the formula would
@@ -50,14 +51,11 @@ const Home = () => (
           <Code>30px</Code> value for the font-size of this heading to make it
           scale with the viewport width.
         </p>
-      </LongDescription>
-      <ToolWrapper>
         <p>
-          Here is a tool to calculate this value so you don&#39;t have to
-          remember this formula everytime you need to use it (using pixels):
+          This is a tool to calculate this value so you don&#39;t have to
+          remember this formula everytime you need to use it (using pixels).
         </p>
-        <Tool />
-      </ToolWrapper>
+      </LongDescription>
     </main>
   </Page>
 );
@@ -68,6 +66,18 @@ const Page = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 600px) {
+    height: auto;
+    display: auto;
+    margin: 50px 0;
+  }
+
+  @media screen and (max-height: 700px) {
+    height: auto;
+    display: auto;
+    margin: 50px 0;
+  }
 `;
 
 const Heading = styled.h1`
@@ -96,7 +106,7 @@ const ShortDescription = styled.h2`
 `;
 
 const LongDescription = styled.div`
-  max-width: 950px;
+  max-width: 920px;
   margin: 30px 30px 0;
 
   p {
@@ -104,14 +114,9 @@ const LongDescription = styled.div`
     text-align: center;
   }
 
-  p:not(last-child) {
+  p:not(:last-child) {
     margin-bottom: 15px;
   }
 `;
 
-const ToolWrapper = styled.div`
-  margin-top: 30px;
-  text-align: center;
-`;
-
-export default Home;
+export default App;
