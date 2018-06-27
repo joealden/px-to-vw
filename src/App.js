@@ -108,7 +108,7 @@ const ShortDescription = styled.h2`
 `;
 
 const LongDescription = styled.div`
-  max-width: 920px;
+  max-width: 980px;
   margin: 30px 30px 0;
 
   p {
