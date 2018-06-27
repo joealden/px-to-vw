@@ -29,7 +29,7 @@ const App = () => (
       <Tool />
       <LongDescription>
         <p>
-          When creating a responsive webpage, it can a be time consuming task to
+          When creating a responsive webpage, it can be a time consuming task to
           ensure that text scales correctly. For example, you want to have a
           heading with a font size of <Code>50px</Code> at a breakpoint of
           <Code>2000px</Code> and you want the heading to scale responsively
