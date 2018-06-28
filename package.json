@@ -1,6 +1,6 @@
 {
   "name": "vw-breakpoint-calculator",
-  "description": "A tool that calculates the vw value of an CSS rule for a given breakpoint",
+  "description": "A tool that calculates the vw value from a px for a given breakpoint to make the measurement responsive.",
   "version": "0.1.0",
   "license": "MIT",
   "private": true,

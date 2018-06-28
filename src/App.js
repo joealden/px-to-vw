@@ -28,8 +28,8 @@ const App = () => (
     <main>
       <Heading>VW Breakpoint Calcuator</Heading>
       <ShortDescription>
-        A tool that calculates the <Code>vw</Code> value of an CSS rule for a
-        given breakpoint.
+        A tool that calculates the <Code>vw</Code> value from a <Code>px</Code>{" "}
+        for a given breakpoint to make the measurement responsive.
       </ShortDescription>
       <Tool />
       <LongDescription>
