@@ -74,7 +74,7 @@ const Page = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 815px) {
     height: auto;
     display: auto;
     margin: 50px 0;

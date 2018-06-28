@@ -77,6 +77,7 @@ const ToolWrapper = styled.div`
 
   @media screen and (max-width: 660px) {
     margin: 40px 30px 0;
+    max-width: initial;
   }
 `;
 
