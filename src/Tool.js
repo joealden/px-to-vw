@@ -19,6 +19,7 @@ class Tool extends React.Component {
       !Number.isNaN(elementSize) &&
       typeof breakpoint === "number" &&
       !Number.isNaN(breakpoint) &&
+      elementSize !== 0 && // required as "" coerces to 0
       breakpoint !== 0
     ) {
       const result = (elementSize / breakpoint) * 100;
@@ -48,7 +49,6 @@ class Tool extends React.Component {
           <input
             id="element-size"
             type="number"
-            pattern="[0-9]*"
             value={this.state.elementSize}
             onChange={this.updateElementSize}
           />
@@ -60,7 +60,6 @@ class Tool extends React.Component {
           <input
             id="breakpoint"
             type="number"
-            pattern="[0-9]*"
             value={this.state.breakpoint}
             onChange={this.updateBreakpoint}
           />
