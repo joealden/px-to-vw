@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import styled, { injectGlobal } from "styled-components";
 
 import Tool from "./Tool";
@@ -22,9 +21,6 @@ injectGlobal`
 
 const App = () => (
   <Page>
-    <Helmet>
-      <title>px-to-vw</title>
-    </Helmet>
     <main>
       <Heading>
         <Code>px</Code>-to-<Code>vw</Code>
