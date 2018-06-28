@@ -73,7 +73,7 @@ const ToolWrapper = styled.div`
   margin: 40px auto 0;
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 450px;
 
   @media screen and (max-width: 660px) {
     margin: 40px 30px 0;
@@ -120,6 +120,11 @@ const ToolField = styled.div`
 
     label {
       margin-bottom: 6px;
+    }
+
+    input {
+      width: 90%;
+      text-align: center;
     }
   }
 `;

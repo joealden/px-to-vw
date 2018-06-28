@@ -29,7 +29,7 @@ const App = () => (
       <Heading>VW Breakpoint Calcuator</Heading>
       <ShortDescription>
         A tool that calculates the <Code>vw</Code> value from a <Code>px</Code>{" "}
-        for a given breakpoint to make the measurement responsive.
+        value for a given breakpoint to make the measurement responsive.
       </ShortDescription>
       <Tool />
       <LongDescription>
@@ -80,7 +80,7 @@ const Page = styled.div`
     margin: 50px 0;
   }
 
-  @media screen and (max-height: 700px) {
+  @media screen and (max-height: 800px) {
     height: auto;
     display: auto;
     margin: 50px 0;
@@ -105,10 +105,15 @@ const ShortDescription = styled.h2`
   text-align: center;
   font-weight: 300;
   font-size: 25px;
-  margin: 8px 30px;
+  margin: 8px auto;
+  max-width: 800px;
 
   span {
     font-size: 25px;
+  }
+
+  @media screen and (max-width: 850px) {
+    margin: 8px 30px;
   }
 `;
 
