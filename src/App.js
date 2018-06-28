@@ -23,10 +23,12 @@ injectGlobal`
 const App = () => (
   <Page>
     <Helmet>
-      <title>VW Breakpoint Calcuator</title>
+      <title>px-to-vw</title>
     </Helmet>
     <main>
-      <Heading>VW Breakpoint Calcuator</Heading>
+      <Heading>
+        <Code>px</Code>-to-<Code>vw</Code>
+      </Heading>
       <ShortDescription>
         A tool that calculates the <Code>vw</Code> value from a <Code>px</Code>{" "}
         value for a given breakpoint to make the measurement responsive.
@@ -91,10 +93,14 @@ const Heading = styled.h1`
   text-align: center;
   font-weight: normal;
   font-size: 35px;
-  margin: 0 30px;
+  margin: 0 30px 15px;
+
+  span {
+    font-size: 35px;
+  }
 `;
 
-const Code = styled.span`
+export const Code = styled.span`
   font-family: "Courier New", Courier, monospace;
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;

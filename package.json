@@ -1,12 +1,12 @@
 {
-  "name": "vw-breakpoint-calculator",
+  "name": "px-to-vw",
   "description": "A tool that calculates the vw value from a px value for a given breakpoint to make the measurement responsive.",
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joealden/vw-breakpoint-calculator.git"
+    "url": "git+https://github.com/joealden/px-to-vw.git"
   },
   "dependencies": {
     "react": "^16.4.1",

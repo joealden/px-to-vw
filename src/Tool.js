@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Code } from "./App";
+
 class Tool extends React.Component {
   state = {
     elementSize: 50,
@@ -40,7 +42,9 @@ class Tool extends React.Component {
     return (
       <ToolWrapper>
         <ToolField>
-          <label htmlFor="element-size">Element Size (px): </label>
+          <label htmlFor="element-size">
+            Element Size (<Code>px</Code>):{" "}
+          </label>
           <input
             id="element-size"
             type="number"
@@ -50,7 +54,9 @@ class Tool extends React.Component {
           />
         </ToolField>
         <ToolField>
-          <label htmlFor="breakpoint">Breakpoint (px): </label>
+          <label htmlFor="breakpoint">
+            Breakpoint (<Code>px</Code>):{" "}
+          </label>
           <input
             id="breakpoint"
             type="number"

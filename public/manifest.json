@@ -1,6 +1,6 @@
 {
-  "short_name": "VW Breakpoint Calculator",
-  "name": "VW Breakpoint Calculator",
+  "short_name": "px-to-vw",
+  "name": "px-to-vw",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
