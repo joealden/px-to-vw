@@ -13,7 +13,7 @@ To achieve this, we can calculate a measurement using the `vw` unit that scales
 with the viewport instead of using an absolute unit like `px`. This `vw`
 measurement needs to be equivalent to the `px` measurement at the breakpoint
 specified. The following formula is used to calculate this value:
-`(elementSize / breakpoint) * 100`.
+`(absoluteSize / breakpoint) * 100`.
 
 In the example scenario above, substituting the values into the formula would
 give the following result: `(50) / 2000) * 100 = 2.5`. This means that the value

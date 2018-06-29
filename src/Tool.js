@@ -5,32 +5,32 @@ import { Code } from "./App";
 
 class Tool extends React.Component {
   state = {
-    elementSize: 50,
+    absoluteSize: 50,
     breakpoint: 2000,
     result: 2.5
   };
 
   updateResult = () => {
-    const elementSize = Number(this.state.elementSize);
+    const absoluteSize = Number(this.state.absoluteSize);
     const breakpoint = Number(this.state.breakpoint);
 
     if (
-      typeof elementSize === "number" &&
-      !Number.isNaN(elementSize) &&
+      typeof absoluteSize === "number" &&
+      !Number.isNaN(absoluteSize) &&
       typeof breakpoint === "number" &&
       !Number.isNaN(breakpoint) &&
-      elementSize !== 0 && // required as "" coerces to 0
+      absoluteSize !== 0 && // required as "" coerces to 0
       breakpoint !== 0
     ) {
-      const result = (elementSize / breakpoint) * 100;
+      const result = (absoluteSize / breakpoint) * 100;
       this.setState({ result });
     } else {
       this.setState({ result: false });
     }
   };
 
-  updateElementSize = ({ target }) => {
-    this.setState({ elementSize: target.value }, () => {
+  updateabsoluteSize = ({ target }) => {
+    this.setState({ absoluteSize: target.value }, () => {
       this.updateResult();
     });
   };
@@ -43,14 +43,14 @@ class Tool extends React.Component {
     return (
       <ToolWrapper>
         <ToolField>
-          <label htmlFor="element-size">
-            Element Size (<Code>px</Code>):{" "}
+          <label htmlFor="absolute-size">
+            Absolute Size (<Code>px</Code>):{" "}
           </label>
           <input
-            id="element-size"
+            id="absolute-size"
             type="number"
-            value={this.state.elementSize}
-            onChange={this.updateElementSize}
+            value={this.state.absoluteSize}
+            onChange={this.updateabsoluteSize}
           />
         </ToolField>
         <ToolField>
