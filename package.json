@@ -2,7 +2,7 @@
   "name": "px-to-vw",
   "description": "A tool that calculates the vw value from a px value for a given breakpoint to make the measurement responsive.",
   "author": "Joe Alden <me@joealden.com> (joealden.com)",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "repository": {
@@ -10,13 +10,19 @@
     "url": "git+https://github.com/joealden/px-to-vw.git"
   },
   "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4",
-    "styled-components": "^3.3.3"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "2.1.3",
+    "styled-components": "^4.1.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

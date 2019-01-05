@@ -1,9 +1,9 @@
 import React from "react";
-import styled, { injectGlobal } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 import Tool from "./Tool";
 
-injectGlobal`
+const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
   * {
@@ -20,7 +20,16 @@ injectGlobal`
 `;
 
 const App = () => (
-  <Page>
+  <>
+    <Page />
+    <GlobalStyles />
+  </>
+);
+
+export default App;
+
+const Page = () => (
+  <PageWrapper>
     <main>
       <Heading>
         <Code>px</Code>-to-<Code>vw</Code>
@@ -62,10 +71,10 @@ const App = () => (
         </p>
       </LongDescription>
     </main>
-  </Page>
+  </PageWrapper>
 );
 
-const Page = styled.div`
+const PageWrapper = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -132,5 +141,3 @@ const LongDescription = styled.div`
     margin-bottom: 15px;
   }
 `;
-
-export default App;
