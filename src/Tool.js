@@ -74,6 +74,8 @@ class Tool extends React.Component {
   }
 }
 
+export default Tool;
+
 const ToolWrapper = styled.div`
   margin: 40px auto 0;
   display: flex;
@@ -139,5 +141,3 @@ const ToolResult = styled.span`
   font-size: 30px;
   text-align: center;
 `;
-
-export default Tool;
